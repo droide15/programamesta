@@ -1,0 +1,8 @@
+<step title="Incoming Request" date="2017-06-07T20:38:14.986" instance="d990c9" url="/deployments" method="GET" type="request" pid="604980,2,91" Connection="Keep-Alive" Accept="application/json, application/xml, text/json, text/x-json, text/javascript, text/xml" Accept-Encoding="gzip, deflate" Host="programamesta.scm.gear.host" User-Agent="RestSharp/104.4.0.0" X-NewRelic-ID="XQYEUFFQGwYAXFJRAAk=" X-NewRelic-Transaction="PxQAWVRSDwACUCMndnVxJyIJFB8EBw8RVU4aVQAKBQUAVw0jdCB3JCVwD0NKQV4FCVJVUwADFTs=" X-SITE-DEPLOYMENT-ID="programamesta" WAS-DEFAULT-HOSTNAME="programamesta.scm.gear.host" >
+  <step title="Cleanup Xml Logs" date="2017-06-07T20:38:15.236" /><!-- duration: 266ms -->
+  <step title="DeploymentService.GetCurrentEtag" date="2017-06-07T20:38:15.627" >
+    <step title="Current Etag: &quot;f72b5221c6acd484&quot;, Cached Etag: &quot;f72b5221c6acd484&quot;" date="2017-06-07T20:38:16.127" /><!-- duration: 94ms -->
+  </step><!-- duration: 641ms -->
+  <step title="DeploymentService.GetDeployResults" date="2017-06-07T20:38:16.298" /><!-- duration: 47ms -->
+  <step title="Outgoing response" date="2017-06-07T20:38:16.377" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.5" x-ms-request-id="0adc2ee6-5100-40cb-83bf-025e36b50fdb" ETag="&quot;f72b5221c6acd484&quot;" Cache-Control="private" X-AspNet-Version="4.0.30319" Content-Type="application/json; charset=utf-8" /><!-- duration: 16ms -->
+</step><!-- duration: 1438ms -->
