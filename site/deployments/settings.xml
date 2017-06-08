@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<settings>
-  <deployment>
-    <add key="ScmType" value="GitHub" />
-    <add key="branch" value="master" />
-  </deployment>
-</settings>
