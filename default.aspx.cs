@@ -1,16 +1,30 @@
 using System;
-using System.Data ;
-using System.Data.SqlClient ;
-using System.Configuration; 
+using System.Configuration;
+using System.Data.Odbc;
 
 public partial class _Default : System.Web.UI.Page
 {
-	protected void Button1_Click(object sender, EventArgs e)
+	protected void Reiniciar_Click(object sender, EventArgs e)
 	{
-		string connectionString = ConfigurationManager.ConnectionStrings["SQLDbConnection"].ToString();
-		SqlConnection connection = new SqlConnection(connectionString);
-		connection.Open();
-		Label1.Text = "Connected to Database Server !!";
-		connection.Close();
+        try
+        {
+            using (OdbcConnection connection = new OdbcConnection(ConfigurationManager.ConnectionStrings["MySQLConnStr"].ConnectionString))
+            { // http://asp.net-tutorials.com/mysql/getting-started/
+                connection.Open();
+                /*using (OdbcCommand command = new OdbcCommand("SELECT name FROM test_users", connection))
+                using (OdbcDataReader dr = command.ExecuteReader())
+                {
+                    while (dr.Read())
+                        Response.Write(dr["name"].ToString() + "<br />");
+                    dr.Close();
+                }*/
+                Reini_msg.Text = "Connected to Database Server !!";
+                connection.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            Reini_msg.Text = "An error occured: " + ex.Message;
+        }
 	}
 }
